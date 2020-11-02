@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 void print_usage(const char *s) {
-    fprintf(stderr, "Usage: %s [-t] [-n] file [further_files] [destination]\n", s);
+    fprintf(stderr, "Usage: %s [-a] [-f] [files...] [destination]\n", s);
 }
 
 int main(int argc, char *argv[]) {
