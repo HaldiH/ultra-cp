@@ -83,14 +83,15 @@ int ultra_ls(const char *file) {
 
         struct dirent *dir;
         while ((dir = readdir(d))) {
-            if (strcmp(dir->d_name, "..") == 0 || strcmp(dir->d_name, ".") == 0)
+            if (strncmp(dir->d_name, "..", MAX_BUFFER_LENGTH - 1) == 0 ||
+                strncmp(dir->d_name, ".", MAX_BUFFER_LENGTH - 1) == 0)
                 continue;
 
             char file_path[MAX_BUFFER_LENGTH];
             strncpy(file_path, file, MAX_BUFFER_LENGTH);
 
             if (!is_trailing_char(file_path, '/', MAX_BUFFER_LENGTH))
-                strcat(file_path, "/");
+                strncat(file_path, "/", MAX_BUFFER_LENGTH-1);
             strncat(file_path, dir->d_name, MAX_BUFFER_LENGTH);
 
             if (lstat(file_path, &sb)) {

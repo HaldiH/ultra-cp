@@ -11,6 +11,11 @@ CTestTestfile.cmake
 _deps
 cmake-build-debug
 
+*.o
+ultra-cp
+
 # IDE files
 .idea
 .vscode
+
+Report.pdf
