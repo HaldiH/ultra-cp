@@ -6,6 +6,14 @@ author: Hugo Haldi
 date: 3 novembre 2020
 ---
 
+## Compilation
+
+Pour compiler le code, un Makefile est disponible: 
+
+```bash
+make ultra-cp
+```
+
 ## 1 ultra-ls
 
 La première partie du TP concerne la fonctionnalité de listing des fichiers, nommé *ultra-ls*. L'en-tête des fonctions se trouve dans `include/ultra-ls.h` et le code source dans `src/ultra-ls.c`.
@@ -42,7 +50,9 @@ Dans l'exécutable de `main`, le listing n'est effectué que si *ultra_cp* est a
 
 ## 2 ultra-cp
 
-*ultra-cp* permet de copier des fichiers/dossiers d'un répertoire de départ, cers un répertoire d'arrivée. La méthode `ultra-cp` doit être appelée avec une liste des fichiers sources, la taille de la liste, le chemin de destination, et des flags (0, *U_AFLAG* ou *U_FFLAG*).
+*ultra-cp* permet de copier des fichiers/dossiers d'un répertoire de départ, cers un répertoire d'arrivée. Le fichier d'en-tête est dans `include/ultra-cp.h` et le code source dans `src/ultra-cp.c`.
+
+La méthode `ultra-cp` doit être appelée avec une liste des fichiers sources, la taille de la liste, le chemin de destination, et des flags (0, *U_AFLAG* ou *U_FFLAG*).
 
 Le programme fonctionne de la manière suivante:
 
