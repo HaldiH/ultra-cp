@@ -51,7 +51,7 @@ Dans l'exécutable de `main`, le listing n'est effectué que si *ultra_cp* est a
 
 ## 2 ultra-cp
 
-*ultra-cp* permet de copier des fichiers/dossiers d'un répertoire de départ, cers un répertoire d'arrivée. Le fichier d'en-tête est dans `include/ultra-cp.h` et le code source dans `src/ultra-cp.c`.
+*ultra-cp* permet de copier des fichiers/dossiers d'un répertoire de départ, vers un répertoire d'arrivée. Le fichier d'en-tête est dans `include/ultra-cp.h` et le code source dans `src/ultra-cp.c`.
 
 La méthode `ultra-cp` doit être appelée avec une liste des fichiers sources, la taille de la liste, le chemin de destination, et des flags (0, *U_AFLAG* ou *U_FFLAG*).
 
@@ -68,7 +68,7 @@ Le programme fonctionne de la manière suivante:
 
 Le programme implémente deux flags: `-f` et `-a`.
 
-Le flag `-a` modifie les permissions du fichier de destination si il existe déjà et est identique au fichier source. Les fichiers de destination prendront donc les mêmes permissions que les fichiers sources, qu'ils existent déjà ou non
+Le flag `-a` modifie les permissions du fichier de destination si il existe déjà et est identique au fichier source. Les fichiers de destination prendront donc les mêmes permissions que les fichiers sources, qu'ils existent déjà ou non.
 
 Le flag `-f` copie les liens en tant que tel, sans les suivre, en transformant le chemin du lien en chemin absolu si il est relatif.
 
