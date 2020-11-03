@@ -18,4 +18,5 @@ ultra-cp
 .idea
 .vscode
 
-Report.pdf
+*.pdf
+*.tar.gz

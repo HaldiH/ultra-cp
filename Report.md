@@ -4,11 +4,12 @@ title: |
     | ultra-cp
 author: Hugo Haldi
 date: 3 novembre 2020
+geometry: margin=3cm
 ---
 
 ## Compilation
 
-Pour compiler le code, un Makefile est disponible: 
+Pour compiler le code, un Makefile est disponible:
 
 ```bash
 make ultra-cp
@@ -70,3 +71,28 @@ Le programme implémente deux flags: `-f` et `-a`.
 Le flag `-a` modifie les permissions du fichier de destination si il existe déjà et est identique au fichier source. Les fichiers de destination prendront donc les mêmes permissions que les fichiers sources, qu'ils existent déjà ou non
 
 Le flag `-f` copie les liens en tant que tel, sans les suivre, en transformant le chemin du lien en chemin absolu si il est relatif.
+
+### Manuel
+
+```text
+NAME
+        ultra-cp - make files and directories backups
+
+SYNOPSIS
+        ultra-cp FILE
+        ultra-cp [OPTION]... SOURCE DEST
+        ultra-cp [OPTION]... SOURCE... DIRECTORY
+
+DESCRIPTION
+        Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+        If only one parameter has been given, show file properties, or if it is a directory, list all files properties.
+
+OPTIONS
+        -a  overwrite the destination permissions
+
+        -f  don't follow link; copy symbolic link as it, with absolute path
+
+AUTHOR
+        Written by Hugo Haldi.
+```

@@ -3,9 +3,7 @@
 //
 
 #include "ultra-cp.h"
-#include "ultra-ls.h"
 #include <dirent.h>
-#include <errno.h>
 #include <fcntl.h>
 #include <libgen.h>
 #include <stdio.h>
@@ -35,6 +33,8 @@ ssize_t copy_file_wrapper(const char *out_file, const char *in_file, const struc
         fprintf(stderr, "Error: cannot copy file '%s'.\n", in_file);
         return -1;
     }
+    close(in_fd);
+    close(out_fd);
     return rc;
 }
 
@@ -114,6 +114,7 @@ ssize_t copy(const char *out_file, const char *in_file, const struct stat *in_sb
                 return -1;
             }
         }
+        closedir(dir);
         return rc;
     }
 

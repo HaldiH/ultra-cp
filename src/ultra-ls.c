@@ -9,7 +9,7 @@
 #include <string.h>
 #include <time.h>
 
-const char *mode(unsigned long m) {
+const char *mode(unsigned char m) {
     static char mode[4];
     mode[0] = m >> 2 & 1 ? 'r' : '-';
     mode[1] = m >> 1 & 1 ? 'w' : '-';

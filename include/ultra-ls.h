@@ -15,7 +15,20 @@
  * @return -1 if an error occurred
  */
 int ultra_ls(const char *file);
-const char *mode(unsigned long m);
+
+/**
+ * Get the octal based string permission representation
+ * @param m 3 bits corresponding to octal base
+ * @return string of corresponding permissions with rwx order, with '-' for 0
+ */
+const char *mode(unsigned char m);
+
+/**
+ * Print the file properties in stdout [mode, size, modification date, filename]
+ * @param sb a pointer to the file stat buffer
+ * @param file path of the file from which to print properties
+ * @return 0 if all succeed, -1 if an error occurred
+ */
 int print_file(const struct stat *sb, const char *file);
 
 #endif//TP3_ULTRA_LS_H
