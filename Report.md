@@ -86,7 +86,8 @@ SYNOPSIS
 DESCRIPTION
         Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
 
-        If only one parameter has been given, show file properties, or if it is a directory, list all files properties.
+        If only one parameter has been given, show file properties, or if it is a
+        directory, list all files properties.
 
 OPTIONS
         -a  overwrite the destination permissions
